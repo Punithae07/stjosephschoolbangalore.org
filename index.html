@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>St. Joseph English High School | Excellence in Education</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#00353b",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#757680",
+                        "surface-dim": "#d8dadd",
+                        "outline-variant": "#c5c6d0",
+                        "on-secondary-fixed-variant": "#004d64",
+                        "primary-fixed": "#dbe1ff",
+                        "tertiary": "#001e22",
+                        "footer-deep-blue": "#111B3A",
+                        "on-secondary-container": "#005872",
+                        "on-tertiary-container": "#14a6b7",
+                        "tertiary-fixed-dim": "#5ed7e8",
+                        "inverse-on-surface": "#eff1f4",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#8695c9",
+                        "on-tertiary-fixed-variant": "#004f57",
+                        "surface-bright": "#f7f9fc",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f2f4f7",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#4d5d8c",
+                        "on-surface": "#191c1e",
+                        "inverse-surface": "#2d3133",
+                        "surface": "#f7f9fc",
+                        "text-secondary": "#4A5568",
+                        "on-surface-variant": "#45464f",
+                        "surface-white": "#FFFFFF",
+                        "on-background": "#191c1e",
+                        "background": "#f7f9fc",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#e0e3e6",
+                        "surface-container": "#eceef1",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#b6c5fb",
+                        "error": "#ba1a1a",
+                        "primary": "#041744",
+                        "secondary-container": "#5ed1ff",
+                        "tertiary-fixed": "#96f1ff",
+                        "primary-container": "#1d2d5a",
+                        "text-primary": "#111B3A",
+                        "surface-container-high": "#e6e8eb",
+                        "on-primary-fixed-variant": "#354573",
+                        "surface-variant": "#e0e3e6",
+                        "secondary-fixed": "#bee9ff",
+                        "primary-fixed-dim": "#b6c5fb",
+                        "secondary-fixed-dim": "#68d3ff",
+                        "secondary": "#006684",
+                        "on-tertiary-fixed": "#001f24",
+                        "on-primary-fixed": "#051845",
+                        "on-secondary-fixed": "#001f2a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "section-padding": "80px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter"],
+                        "headline-xl-mobile": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "headline-xl": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-xl-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["26px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    },
+                    "animation": {
+                        "fade-in-up": "fadeInUp 0.8s ease-out forwards",
+                        "glow": "glow 2s infinite alternate"
+                    },
+                    "keyframes": {
+                        "fadeInUp": {
+                            "0%": { opacity: "0", transform: "translateY(40px)" },
+                            "100%": { opacity: "1", transform: "translateY(0)" }
+                        },
+                        "glow": {
+                            "0%": { boxShadow: "0 0 5px rgba(94, 209, 255, 0.2)" },
+                            "100%": { boxShadow: "0 0 20px rgba(94, 209, 255, 0.4)" }
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.85);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.1), 0 0 20px rgba(94, 209, 255, 0.3);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .nav-scrolled {
+            background-color: #041744 !important;
+            height: 72px !important;
+        }
+
+        .nav-scrolled .text-primary {
+            color: #ffffff !important;
+        }
+
+        .nav-scrolled .text-on-surface-variant {
+            color: rgba(255, 255, 255, 0.8) !important;
+        }
+
+        .nav-scrolled .border-outline-variant\/20 {
+            border-color: rgba(255, 255, 255, 0.1) !important;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #c5c6d0;
+            border-radius: 10px;
+        }
+
+        .masonry {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-auto-rows: 200px;
+            gap: 16px;
+        }
+
+        .masonry-item-large {
+            grid-row: span 2;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+    <!-- Top Navigation Bar -->
+    <nav class="w-full z-50 transition-all duration-500" id="main-nav">
+        <div class="bg-white py-4">
+            <div
+                class="max-w-container-max mx-auto px-margin-mobile md:px-gutter flex flex-col items-center text-center">
+                <img src="assets/header.jpg">
+            </div>
+        </div>
+        <div class="bg-primary w-full">
+            <div
+                class="max-w-container-max mx-auto px-margin-mobile md:px-gutter flex justify-between lg:justify-center items-center h-12">
+                <div class="hidden lg:flex items-center gap-6">
+                    <a href="#"
+                        class="font-label-md text-sm text-white/90 hover:text-secondary-fixed transition-colors flex items-center gap-1"><span
+                            class="material-symbols-outlined text-sm">home</span> Home</a>
+                    <div class="h-4 w-[1px] bg-white/20"></div>
+                    <a href="#"
+                        class="font-label-md text-sm text-white/90 hover:text-secondary-fixed transition-colors flex items-center gap-1"><span
+                            class="material-symbols-outlined text-sm">info</span> About Us</a>
+                    <div class="h-4 w-[1px] bg-white/20"></div>
+                    <a href="#"
+                        class="font-label-md text-sm text-white/90 hover:text-secondary-fixed transition-colors flex items-center gap-1"><span
+                            class="material-symbols-outlined text-sm">school</span> Academics</a>
+                    <div class="h-4 w-[1px] bg-white/20"></div>
+                    <a href="#"
+                        class="font-label-md text-sm text-white/90 hover:text-secondary-fixed transition-colors flex items-center gap-1"><span
+                            class="material-symbols-outlined text-sm">domain</span> Infrastructure</a>
+                    <div class="h-4 w-[1px] bg-white/20"></div>
+                    <a href="#"
+                        class="font-label-md text-sm text-white/90 hover:text-secondary-fixed transition-colors flex items-center gap-1"><span
+                            class="material-symbols-outlined text-sm">group</span> Staff</a>
+                    <div class="h-4 w-[1px] bg-white/20"></div>
+                    <a href="#"
+                        class="font-label-md text-sm text-white/90 hover:text-secondary-fixed transition-colors flex items-center gap-1"><span
+                            class="material-symbols-outlined text-sm">groups</span> Students</a>
+                    <div class="h-4 w-[1px] bg-white/20"></div>
+                    <a href="#"
+                        class="font-label-md text-sm text-white/90 hover:text-secondary-fixed transition-colors flex items-center gap-1"><span
+                            class="material-symbols-outlined text-sm">gallery_thumbnail</span> Gallery</a>
+                    <div class="h-4 w-[1px] bg-white/20"></div>
+                    <a href="#"
+                        class="font-label-md text-sm text-white/90 hover:text-secondary-fixed transition-colors flex items-center gap-1"><span
+                            class="material-symbols-outlined text-sm">contact_support</span> Contact Us</a>
+                </div>
+                <div class="lg:hidden flex items-center justify-between w-full">
+                    <span class="text-white font-bold text-xs uppercase">Menu</span>
+                    <button id="mobile-menu-btn" class="text-white inline-flex items-center gap-2" aria-expanded="false" aria-controls="mobile-submenu">
+                        <span id="mobile-menu-icon" class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile submenu -->
+            <div id="mobile-submenu" class="lg:hidden border-t border-white/10 bg-primary/90 backdrop-blur-md hidden">
+                <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-4 space-y-1">
+                    <button type="button" class="w-full flex items-center justify-between px-4 py-3 rounded-xl hover:bg-white/10 transition-colors" data-acc-toggle="about">
+                        <span class="flex items-center gap-2 text-white/90 font-label-md text-sm"><span class="material-symbols-outlined text-secondary">info</span> About Us</span>
+                        <span class="material-symbols-outlined text-white/70">expand_more</span>
+                    </button>
+                    <div id="about" class="hidden pl-4 pr-2 pb-3">
+                        <a class="block px-4 py-2 rounded-lg text-white/80 hover:text-secondary-fixed hover:bg-white/5 transition-colors text-sm font-label-md" href="#">Our Mission</a>
+                        <a class="block px-4 py-2 rounded-lg text-white/80 hover:text-secondary-fixed hover:bg-white/5 transition-colors text-sm font-label-md" href="#">Our Values</a>
+                        <a class="block px-4 py-2 rounded-lg text-white/80 hover:text-secondary-fixed hover:bg-white/5 transition-colors text-sm font-label-md" href="#">History</a>
+                    </div>
+
+                    <button type="button" class="w-full flex items-center justify-between px-4 py-3 rounded-xl hover:bg-white/10 transition-colors" data-acc-toggle="academics">
+                        <span class="flex items-center gap-2 text-white/90 font-label-md text-sm"><span class="material-symbols-outlined text-secondary">school</span> Academics</span>
+                        <span class="material-symbols-outlined text-white/70">expand_more</span>
+                    </button>
+                    <div id="academics" class="hidden pl-4 pr-2 pb-3">
+                        <a class="block px-4 py-2 rounded-lg text-white/80 hover:text-secondary-fixed hover:bg-white/5 transition-colors text-sm font-label-md" href="#">Academic & Staff</a>
+                        <a class="block px-4 py-2 rounded-lg text-white/80 hover:text-secondary-fixed hover:bg-white/5 transition-colors text-sm font-label-md" href="#">School Timings</a>
+                    </div>
+
+                    <button type="button" class="w-full flex items-center justify-between px-4 py-3 rounded-xl hover:bg-white/10 transition-colors" data-acc-toggle="infrastructure">
+                        <span class="flex items-center gap-2 text-white/90 font-label-md text-sm"><span class="material-symbols-outlined text-secondary">domain</span> Infrastructure</span>
+                        <span class="material-symbols-outlined text-white/70">expand_more</span>
+                    </button>
+                    <div id="infrastructure" class="hidden pl-4 pr-2 pb-3">
+                        <a class="block px-4 py-2 rounded-lg text-white/80 hover:text-secondary-fixed hover:bg-white/5 transition-colors text-sm font-label-md" href="#">Labs</a>
+                        <a class="block px-4 py-2 rounded-lg text-white/80 hover:text-secondary-fixed hover:bg-white/5 transition-colors text-sm font-label-md" href="#">Playground</a>
+                    </div>
+
+                    <button type="button" class="w-full flex items-center justify-between px-4 py-3 rounded-xl hover:bg-white/10 transition-colors" data-acc-toggle="staff">
+                        <span class="flex items-center gap-2 text-white/90 font-label-md text-sm"><span class="material-symbols-outlined text-secondary">group</span> Staff</span>
+                        <span class="material-symbols-outlined text-white/70">expand_more</span>
+                    </button>
+                    <div id="staff" class="hidden pl-4 pr-2 pb-3">
+                        <a class="block px-4 py-2 rounded-lg text-white/80 hover:text-secondary-fixed hover:bg-white/5 transition-colors text-sm font-label-md" href="#">Faculty Directory</a>
+                    </div>
+
+                    <button type="button" class="w-full flex items-center justify-between px-4 py-3 rounded-xl hover:bg-white/10 transition-colors" data-acc-toggle="students">
+                        <span class="flex items-center gap-2 text-white/90 font-label-md text-sm"><span class="material-symbols-outlined text-secondary">groups</span> Students</span>
+                        <span class="material-symbols-outlined text-white/70">expand_more</span>
+                    </button>
+                    <div id="students" class="hidden pl-4 pr-2 pb-3">
+                        <a class="block px-4 py-2 rounded-lg text-white/80 hover:text-secondary-fixed hover:bg-white/5 transition-colors text-sm font-label-md" href="#">Achievements</a>
+                        <a class="block px-4 py-2 rounded-lg text-white/80 hover:text-secondary-fixed hover:bg-white/5 transition-colors text-sm font-label-md" href="#">Scholarships</a>
+                    </div>
+
+                    <div class="pt-2">
+                        <a class="block px-4 py-3 rounded-xl hover:bg-white/10 transition-colors text-white/90 font-label-md text-sm flex items-center gap-2" href="#">
+                            <span class="material-symbols-outlined text-secondary">gallery_thumbnail</span> Gallery
+                        </a>
+                        <a class="block px-4 py-3 rounded-xl hover:bg-white/10 transition-colors text-white/90 font-label-md text-sm flex items-center gap-2 mt-1" href="#">
+                            <span class="material-symbols-outlined text-secondary">contact_support</span> Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen w-full flex items-center overflow-hidden">
+        <div class="absolute inset-0 z-0 overflow-hidden">
+            <img alt="Main Campus" class="w-full h-[120%] object-cover scale-110" id="hero-parallax"
+                src="assets/slider001.jpg">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent"></div>
+        </div>
+        <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-gutter text-white w-full">
+            <div class="max-w-3xl space-y-6 animate-fade-in-up">
+                <h1 class="font-headline-xl text-headline-xl leading-tight">Empowering Minds,<br><span
+                        class="text-secondary-container">Enriching Futures.</span></h1>
+                <p class="font-body-lg text-body-lg text-white/90">A tradition of academic excellence combined with
+                    modern innovation. Join a community where every student is nurtured to reach their full potential.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <button
+                        class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-xl font-label-md text-lg hover:bg-secondary-fixed transition-all hover:scale-105 flex items-center gap-2">
+                        Explore Campus <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                    <button
+                        class="bg-white/10 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-xl font-label-md text-lg hover:bg-white/20 transition-all hover:scale-105">
+                        View Admissions
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+            <span class="material-symbols-outlined text-white text-4xl">keyboard_double_arrow_down</span>
+        </div>
+    </header>
+    <!-- Welcome Section -->
+    <section class="py-section-padding bg-surface reveal active">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter grid md:grid-cols-2 gap-16 items-center">
+            <div class="relative group">
+                <div
+                    class="absolute -inset-4 bg-secondary-container/20 rounded-3xl blur-2xl group-hover:bg-secondary-container/30 transition-all duration-700">
+                </div>
+                <img alt="School Building"
+                    class="relative rounded-2xl shadow-xl w-full h-[450px] object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                    src="assets/school-building.jpg">
+            </div>
+            <div class="space-y-6">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-container/10 text-secondary border border-secondary/20">
+                    <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                    <span class="font-label-md text-xs uppercase tracking-widest">Since 2011</span>
+                </div>
+                <h2 class="font-headline-lg text-headline-lg text-primary">Welcome to St. Joseph English High School
+                </h2>
+                <p class="text-on-surface-variant font-body-md leading-relaxed italic border-l-4 border-secondary pl-6">
+                    "CHILD IS THE SOURCE OF THE NATION"
+                </p>
+                <p class="text-on-surface-variant font-body-md leading-relaxed">
+                    St. Joseph English High School has come a long way from modest beginning. It has successfully seen
+                    years of growth and now it looks back with fond memories. Founded with the blessings of our general
+                    Rev. Mother Antony Xavier cic, we are a school community of high expectations, academic excellence,
+                    and holistic development.
+                </p>
+                <button
+                    class="inline-flex items-center gap-2 font-label-md text-primary hover:text-secondary transition-colors group">
+                    Read Full Story <span
+                        class="material-symbols-outlined group-hover:translate-x-1 transition-transform">east</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Stats Counter Section -->
+    <section class="bg-primary py-16" id="stats-section">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="text-center space-y-2">
+                <div class="text-secondary-fixed text-4xl md:text-5xl font-bold font-headline-xl stat-counter"
+                    data-target="1500">1500+</div>
+                <div class="text-white/70 font-label-md uppercase tracking-widest text-xs">Students</div>
+            </div>
+            <div class="text-center space-y-2">
+                <div class="text-secondary-fixed text-4xl md:text-5xl font-bold font-headline-xl stat-counter"
+                    data-target="85">85+</div>
+                <div class="text-white/70 font-label-md uppercase tracking-widest text-xs">Expert Faculty</div>
+            </div>
+            <div class="text-center space-y-2">
+                <div class="text-secondary-fixed text-4xl md:text-5xl font-bold font-headline-xl stat-counter"
+                    data-target="13">13+</div>
+                <div class="text-white/70 font-label-md uppercase tracking-widest text-xs">Years Excellence</div>
+            </div>
+            <div class="text-center space-y-2">
+                <div class="text-secondary-fixed text-4xl md:text-5xl font-bold font-headline-xl stat-counter"
+                    data-target="50">50+</div>
+                <div class="text-white/70 font-label-md uppercase tracking-widest text-xs">Awards Won</div>
+            </div>
+        </div>
+    </section>
+    <!-- Info Cards Section -->
+    <section class="py-section-padding relative overflow-hidden reveal active">
+        <div class="absolute inset-0 -z-10">
+            <img alt="Background Texture" class="w-full h-full object-cover opacity-10"
+                src="assets/bg-img.jpg">
+        </div>
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-2xl group">
+                    <div
+                        class="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-secondary transition-colors duration-300">
+                        <span class="material-symbols-outlined text-white text-3xl">history</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-4">Our History</h3>
+                    <p class="text-on-surface-variant font-body-md mb-6">Welcome to St. Joseph English School St. Joseph English School has come a long way from a humble and modest beginning. It has been in successful existence for the last</p>
+                    <a class="text-secondary font-bold font-label-md flex items-center gap-2 group-hover:gap-3 transition-all"
+                        href="#">Read More <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+                </div>
+                <div class="glass-card p-8 rounded-2xl group">
+                    <div
+                        class="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-secondary transition-colors duration-300">
+                        <span class="material-symbols-outlined text-white text-3xl">school</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-4">Academics</h3>
+                    <p class="text-on-surface-variant font-body-md mb-6">Academics & Faculty Academic & Staff Details – Click Here to Download At St. Joseph, we believe every child is unique and gifted in their own way. Each student</p>
+                    <a class="text-secondary font-bold font-label-md flex items-center gap-2 group-hover:gap-3 transition-all"
+                        href="#">Read More<span class="material-symbols-outlined text-sm">open_in_new</span></a>
+                </div>
+                <div class="glass-card p-8 rounded-2xl group">
+                    <div
+                        class="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-secondary transition-colors duration-300">
+                        <span class="material-symbols-outlined text-white text-3xl">domain</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-4">Infrastructure</h3>
+                    <p class="text-on-surface-variant font-body-md mb-6">Infrastructure Details – Click here to Download The infrastructure is scientifically planned, artistically designed and precisely constructed in order to meet the specific needs of</p>
+                    <a class="text-secondary font-bold font-label-md flex items-center gap-2 group-hover:gap-3 transition-all"
+                        href="#">Read More<span class="material-symbols-outlined text-sm">open_in_new</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- News/Principal/Events Dashboard -->
+    <section class="py-section-padding bg-surface-container-low reveal active">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+            <div class="grid lg:grid-cols-12 gap-8">
+                <div
+                    class="lg:col-span-3 bg-white rounded-3xl p-6 shadow-sm flex flex-col h-[600px] hover:shadow-xl transition-shadow duration-500">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="font-headline-md text-2xl font-bold text-primary">Latest News</h3>
+                        <span class="material-symbols-outlined text-secondary animate-pulse">rss_feed</span>
+                    </div>
+                    <div class="space-y-4 overflow-y-auto pr-2 custom-scrollbar flex-grow">
+                        <div
+                            class="p-4 bg-background rounded-xl hover:bg-secondary-container/10 transition-all duration-300 cursor-pointer border-l-4 border-secondary hover:translate-x-1">
+                            <span class="text-[10px] font-bold text-secondary uppercase tracking-widest">May 15,
+                                2026</span>
+                            <h4 class="font-bold text-sm text-primary mt-1">Inter-School Sports Meet 2026 Registration
+                                Opens</h4>
+                        </div>
+                        <div
+                            class="p-4 bg-background rounded-xl hover:bg-secondary-container/10 transition-all duration-300 cursor-pointer border-l-4 border-outline hover:translate-x-1">
+                            <span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">May
+                                10, 2026</span>
+                            <h4 class="font-bold text-sm text-primary mt-1">New Computer Lab Inauguration Ceremony</h4>
+                        </div>
+                        <div
+                            class="p-4 bg-background rounded-xl hover:bg-secondary-container/10 transition-all duration-300 cursor-pointer border-l-4 border-outline hover:translate-x-1">
+                            <span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">May
+                                05, 2026</span>
+                            <h4 class="font-bold text-sm text-primary mt-1">Summer Vacation Schedule Announced</h4>
+                        </div>
+                    </div>
+                    <button
+                        class="mt-6 w-full py-3 border border-outline-variant text-primary font-label-md rounded-xl hover:bg-primary hover:text-white transition-all">View
+                        All News</button>
+                </div>
+                <div
+                    class="lg:col-span-6 bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-shadow duration-500">
+                    <div class="flex flex-col md:flex-row gap-8">
+                        <div class="md:w-1/3">
+                            <div class="relative group">
+                                <img alt="Principal"
+                                    class="rounded-2xl w-full h-64 object-cover shadow-lg transition-transform duration-500 group-hover:scale-105"
+                                    src="assets/prin.jpeg">
+                                <div
+                                    class="absolute inset-0 rounded-2xl bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity">
+                                </div>
+                            </div>
+                            <div class="mt-4 text-center">
+                                <p class="font-bold text-primary">Rev. Sister Mary</p>
+                                <p class="text-xs text-on-surface-variant">Principal, SJHS</p>
+                            </div>
+                        </div>
+                        <div class="md:w-2/3 space-y-4">
+                            <span
+                                class="material-symbols-outlined text-secondary-container text-5xl opacity-40">format_quote</span>
+                            <h3 class="font-headline-md text-2xl font-bold text-primary">Principal's Message</h3>
+                            <p class="text-on-surface-variant italic leading-relaxed">
+                                "This is the day that the lord has made, let us rejoice and be glad” I thank the wonderful God to give me the opportunity to serve the society through this education ministry. “Education is not the preparation of life, education is life itself.” -John Dewey We at St. Joseph English High School strive to respect the unique individuality of each child, give the child the right kind of help. We believe that a child will be successful in life if we accept him/her as they are and inspire them"
+                            </p>
+                            <div class="pt-4">
+                                <button
+                                    class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md hover:bg-secondary transition-all hover:shadow-lg">Read
+                                    Full Message</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="lg:col-span-3 bg-white rounded-3xl p-6 shadow-sm flex flex-col h-[600px] hover:shadow-xl transition-shadow duration-500">
+                    <h3 class="font-headline-md text-2xl font-bold text-primary mb-6">Upcoming Events</h3>
+                    <div class="bg-surface rounded-2xl p-4 mb-6 text-center">
+                        <div class="flex justify-between items-center mb-4">
+                            <button class="p-1 hover:bg-outline-variant/20 rounded-full transition-colors"><span
+                                    class="material-symbols-outlined">chevron_left</span></button>
+                            <span class="font-bold text-primary">MAY, 2026</span>
+                            <button class="p-1 hover:bg-outline-variant/20 rounded-full transition-colors"><span
+                                    class="material-symbols-outlined">chevron_right</span></button>
+                        </div>
+                        <div class="grid grid-cols-7 text-[10px] font-bold text-outline uppercase mb-2">
+                            <div class="">M</div>
+                            <div class="">T</div>
+                            <div class="">W</div>
+                            <div class="">T</div>
+                            <div class="">F</div>
+                            <div class="">S</div>
+                            <div class="">S</div>
+                        </div>
+                        <div class="grid grid-cols-7 gap-1 text-xs">
+                            <div class="h-8 flex items-center justify-center text-outline/30">27</div>
+                            <div class="h-8 flex items-center justify-center text-outline/30">28</div>
+                            <div class="h-8 flex items-center justify-center text-outline/30">29</div>
+                            <div class="h-8 flex items-center justify-center text-outline/30">30</div>
+                            <div
+                                class="h-8 flex items-center justify-center font-bold bg-secondary-container/20 rounded-lg text-secondary ring-2 ring-secondary/20">
+                                1</div>
+                            <div
+                                class="h-8 flex items-center justify-center hover:bg-outline-variant/10 rounded-lg cursor-pointer">
+                                2</div>
+                            <div
+                                class="h-8 flex items-center justify-center text-error hover:bg-error/10 rounded-lg cursor-pointer">
+                                3</div>
+                        </div>
+                    </div>
+                    <div class="space-y-3 overflow-y-auto pr-1 custom-scrollbar">
+                        <div
+                            class="flex gap-4 p-3 bg-background rounded-xl border border-outline-variant/20 hover:border-secondary transition-colors cursor-pointer group">
+                            <div
+                                class="flex flex-col items-center justify-center bg-white px-2 rounded-lg border border-secondary shadow-sm min-w-[50px] group-hover:scale-105 transition-transform">
+                                <span class="text-xs font-bold text-secondary">MAY</span>
+                                <span class="text-lg font-bold text-primary">22</span>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-xs text-primary">Science Exhibition</h5>
+                                <p class="text-[10px] text-on-surface-variant">Main Hall • 09:00 AM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Gallery Section -->
+    <section class="py-section-padding bg-primary overflow-hidden reveal active">
+        <div
+            class="max-w-container-max mx-auto px-margin-mobile md:px-gutter mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div class="space-y-2">
+                <span class="text-secondary-fixed font-label-md uppercase tracking-widest text-xs">Visual Journey</span>
+                <h2 class="font-headline-lg text-headline-lg text-white">Latest Event Gallery</h2>
+            </div>
+            <div class="flex flex-wrap gap-2">
+                <button
+                    class="px-6 py-2 rounded-full bg-secondary text-white font-label-md text-xs hover:scale-105 transition-transform">All</button>
+                <button
+                    class="px-6 py-2 rounded-full bg-white/10 text-white font-label-md text-xs hover:bg-white/20 transition-all hover:scale-105">Sports</button>
+                <button
+                    class="px-6 py-2 rounded-full bg-white/10 text-white font-label-md text-xs hover:bg-white/20 transition-all hover:scale-105">Cultural</button>
+                <button
+                    class="px-6 py-2 rounded-full bg-white/10 text-white font-label-md text-xs hover:bg-white/20 transition-all hover:scale-105">Labs</button>
+            </div>
+        </div>
+        <div class="masonry max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+            <div class="masonry-item-large relative group overflow-hidden rounded-2xl">
+                <img alt="Students in Lab"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    src="assets/gallery01.jpg">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-6">
+                    <p
+                        class="text-white font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        Chemistry Lab Session</p>
+                </div>
+            </div>
+            <div class="masonry-item-large relative group overflow-hidden rounded-2xl">
+                <img alt="Sports Field"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    src="assets/gallery02.jpg">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-6">
+                    <p
+                        class="text-white font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        Annual Sports Day</p>
+                </div>
+            </div>
+            <div class="masonry-item-large relative group overflow-hidden rounded-2xl">
+                <img alt="Library"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    src="assets/gallery03.jpg">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-6">
+                    <p
+                        class="text-white font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        Central Library</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Map & Contact Section -->
+    <section class="relative w-full bg-surface-dim">
+        <!-- Map (responsive) -->
+        <div class="relative w-full">
+            <div class="relative w-full overflow-hidden">
+                <div class="w-full aspect-[16/10] md:aspect-[16/9]">
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.5867671126966!2d77.64595287412179!3d13.061954812892829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1757588e9429%3A0x96c54914d4f59385!2sSt.%20Joseph%20English%20High%20School!5e0!3m2!1sen!2sin!4v1779779296468!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact card -->
+        <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 px-margin-mobile md:px-0">
+            <div class="max-w-md mx-auto md:ml-0 md:mr-auto md:translate-x-0 md:w-[420px]">
+                <div
+                    class="bg-white/95 backdrop-blur-md p-6 md:p-8 rounded-3xl shadow-2xl border border-white/50 space-y-6 hover:scale-[1.02] transition-transform duration-500">
+                    <h3 class="font-headline-md text-primary">Get in Touch</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-secondary" data-weight="fill">location_on</span>
+                            <div>
+                                <p class="font-bold text-sm text-primary">Our Location</p>
+                                <p class="text-sm text-on-surface-variant">21/10, Hennur Bagalur Main Road, Kothanur,
+                                    Bangalore - 560 077.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-secondary" data-weight="fill">call</span>
+                            <div>
+                                <p class="font-bold text-sm text-primary">Phone Numbers</p>
+                                <p class="text-sm text-on-surface-variant">+91 98765 43210<br>080-2345 6789</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 pt-2">
+                        <a class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all duration-300"
+                            href="#"><span class="material-symbols-outlined text-lg">social_leaderboard</span></a>
+                        <a class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all duration-300"
+                            href="#"><span class="material-symbols-outlined text-lg">video_library</span></a>
+                        <a class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all duration-300"
+                            href="#"><span class="material-symbols-outlined text-lg">alternate_email</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-footer-deep-blue text-white pt-20 pb-10">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-20">
+                <div class="col-span-1 md:col-span-1 space-y-6">
+                    <div class="flex items-center gap-3">
+                        <h4 class="font-headline-md text-xl font-bold  text-secondary-fixed">About Us</h4>
+                    </div>
+                    <p class="text-white/60 font-body-md text-sm leading-relaxed">
+                        St. Joseph English High School is run by the sisters of the Congregation of the Immaculate Conception (CIC). The Congregation of the Immaculate Conception has a very large scope of spiritual, social, medical and educational services in India, Italy, Germany, Africa (South Africa and Zambia) and Sri Lanka.CIC had its origin in 1911.
+                    </p>
+                </div>
+                <div class="space-y-6">
+                    <h4 class="font-headline-md text-xl font-bold  text-secondary-fixed">Quick Links</h4>
+                    <ul class="space-y-3 text-white/80 text-sm font-label-md">
+                        <li class=""><a class="hover:text-secondary-fixed hover:pl-2 transition-all"
+                                href="#">Infrastructure</a></li>
+                        <li class=""><a class="hover:text-secondary-fixed hover:pl-2 transition-all" href="#">Academic
+                                &amp; Staff</a></li>
+                        <li class=""><a class="hover:text-secondary-fixed hover:pl-2 transition-all" href="#">School
+                                Timings</a></li>
+                        <li class=""><a class="hover:text-secondary-fixed hover:pl-2 transition-all"
+                                href="#">Principal's Message</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-6">
+                    <h4 class="font-headline-md text-xl font-bold  text-secondary-fixed">About Us</h4>
+                    <ul class="space-y-3 text-white/80 text-sm font-label-md">
+                        <li class=""><a class="hover:text-secondary-fixed hover:pl-2 transition-all" href="#">Our
+                                Mission</a></li>
+                        <li class=""><a class="hover:text-secondary-fixed hover:pl-2 transition-all" href="#">Our
+                                Values</a></li>
+                        <li class=""><a class="hover:text-secondary-fixed hover:pl-2 transition-all"
+                                href="#">History</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-6">
+                    <h4 class="font-headline-md text-xl font-bold  text-secondary-fixed">Newsletter</h4>
+                    <div class="relative group">
+                        <input
+                            class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-secondary-fixed transition-all"
+                            placeholder="Your email address" type="email">
+                        <button
+                            class="absolute right-2 top-1.5 bg-secondary-fixed text-on-secondary-fixed p-1.5 rounded-lg hover:bg-white hover:scale-105 transition-all">
+                            <span class="material-symbols-outlined text-sm">send</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-white/40 text-xs">© 2026 St. Joseph English High School. All rights reserved.</p>
+                <div class="flex gap-8 text-white/40 text-xs">
+                    <a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+                    <a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Navigation Scroll Logic
+        const nav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('nav-scrolled', 'shadow-lg');
+                nav.classList.remove('bg-surface/0', 'border-transparent');
+            } else {
+                nav.classList.remove('nav-scrolled', 'shadow-lg');
+                nav.classList.add('bg-surface/0', 'border-transparent');
+            }
+        });
+
+        // Parallax Hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.getElementById('hero-parallax');
+            if (parallax) {
+                parallax.style.transform = `translateY(${scrolled * 0.4}px) scale(1.1)`;
+            }
+        });
+
+        // Intersection Observer for Reveal Animations
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // Stats Counter Animation
+        const statsSection = document.getElementById('stats-section');
+        const counters = document.querySelectorAll('.stat-counter');
+        let started = false;
+
+        const startCounters = () => {
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText.replace('+', '');
+                    const speed = 200;
+                    const inc = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc) + (target > 100 ? '+' : '+');
+                        setTimeout(updateCount, 15);
+                    } else {
+                        counter.innerText = target + '+';
+                    }
+                };
+                updateCount();
+            });
+        };
+
+        const statsObserver = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting && !started) {
+                startCounters();
+                started = true;
+            }
+        }, { threshold: 0.5 });
+
+        if (statsSection) statsObserver.observe(statsSection);
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileSubmenu = document.getElementById('mobile-submenu');
+        const mobileMenuIcon = document.getElementById('mobile-menu-icon');
+
+        if (mobileMenuBtn && mobileSubmenu) {
+            const toggleMenu = () => {
+                const isHidden = mobileSubmenu.classList.contains('hidden');
+                mobileSubmenu.classList.toggle('hidden');
+                mobileSubmenu.classList.toggle('block');
+                mobileSubmenu.classList.toggle('hidden', !isHidden);
+
+                // aria update
+                const expanded = !isHidden;
+                mobileMenuBtn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+
+                // icon update
+                if (mobileMenuIcon) {
+                    mobileMenuIcon.textContent = isHidden ? 'menu_open' : 'menu';
+                }
+            };
+
+            // Ensure initial state is consistent
+            // (default should be hidden on mobile)
+            mobileSubmenu.classList.add('hidden');
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            if (mobileMenuIcon) mobileMenuIcon.textContent = 'menu';
+
+
+            mobileMenuBtn.addEventListener('click', toggleMenu);
+
+            // Close submenu when switching to desktop/tablet view
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 1024) {
+                    mobileSubmenu.classList.add('hidden');
+                    mobileSubmenu.classList.remove('block');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    if (mobileMenuIcon) mobileMenuIcon.textContent = 'menu';
+                }
+            });
+        }
+
+
+        // Accordion submenu inside mobile menu
+        document.querySelectorAll('[data-acc-toggle]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const key = btn.getAttribute('data-acc-toggle');
+                const panel = document.getElementById(key);
+                if (!panel) return;
+
+                const isHidden = panel.classList.contains('hidden');
+                panel.classList.toggle('hidden');
+
+                // Rotate caret (expand_more)
+                // Use simple class toggle by swapping text using Material icon, but keep it minimal.
+                // If you want rotation, you can add a wrapper later.
+                const caret = btn.querySelector('.material-symbols-outlined');
+                const carets = btn.querySelectorAll('.material-symbols-outlined');
+                const lastCaret = carets.length ? carets[carets.length - 1] : caret;
+                if (lastCaret) {
+                    lastCaret.textContent = isHidden ? 'expand_less' : 'expand_more';
+                }
+            });
+        });
+    </script>
+
+
+
+</body>
+
+</html>
