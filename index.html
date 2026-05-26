@@ -207,9 +207,17 @@
                         class="font-label-md text-sm text-white/90 hover:text-secondary-fixed transition-colors flex items-center gap-1"><span
                             class="material-symbols-outlined text-sm">home</span> Home</a>
                     <div class="h-4 w-[1px] bg-white/20"></div>
-                    <a href="#"
-                        class="font-label-md text-sm text-white/90 hover:text-secondary-fixed transition-colors flex items-center gap-1"><span
-                            class="material-symbols-outlined text-sm">info</span> About Us</a>
+                    <div class="relative group">
+                        <button class="font-label-md text-sm text-white/90 hover:text-secondary-fixed transition-colors flex items-center gap-1">
+                            <span class="material-symbols-outlined text-sm">info</span> About Us
+                            <span class="material-symbols-outlined text-xs group-hover:rotate-180 transition-transform">expand_more</span>
+                        </button>
+                        <div class="absolute left-0 mt-0 w-48 bg-primary border border-white/10 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2 z-50">
+                            <a href="#" class="block px-4 py-2 text-sm text-white/90 hover:text-secondary-fixed hover:bg-white/10 transition-colors font-label-md">Our Mission</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-white/90 hover:text-secondary-fixed hover:bg-white/10 transition-colors font-label-md">Our Values</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-white/90 hover:text-secondary-fixed hover:bg-white/10 transition-colors font-label-md">History</a>
+                        </div>
+                    </div>
                     <div class="h-4 w-[1px] bg-white/20"></div>
                     <a href="#"
                         class="font-label-md text-sm text-white/90 hover:text-secondary-fixed transition-colors flex items-center gap-1"><span
